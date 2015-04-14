@@ -2,14 +2,14 @@
 <html>
 
  <body>
-   <video id="video" onpause="javascript:state('playing')" onended="javascript:state('playing')" onplay="javascript:state('playing')">
+   <video id="video" onpause="javascript:state('pause')" onended="javascript:state('ended')" onplay="javascript:state('playing')">
      <source src="http://html5demos.com/assets/dizzy.ogv" type="video/ogg" >
    </video>
      <br>
 
     <hr>
-    <button>Play</button>
-    <button>Pause</button>
+    <button onclick="javascript:play()">Play</button>
+    <button onclick="javascript:pause()">Pause</button>
     <hr>
     <div>State: <span id="state">not yet started</span> (should be one of: paused, playing, ended)</div>
 
